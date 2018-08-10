@@ -1,0 +1,19 @@
+{
+  "name": "nerio-vuetify-table",
+  "version": "1.0.0",
+  "description": "vuetify table component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "table",
+    "vue",
+    "vuetify"
+  ],
+  "author": "CaoJiayuan",
+  "license": "MIT",
+  "dependencies": {
+    "nerio-js-utils": "^1.0.3"
+  }
+}
