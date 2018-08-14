@@ -49,7 +49,7 @@
                       v-model="pagination.page"
                       :length="paginator.last_page"></v-pagination>
         <v-btn :dark="dark" @click="refresh" :class="refreshing ? 'animate rotation' : ''"
-               class="pagination__item circle" depressed style="top: -10px;border-radius: 100% !important;" fab>
+               class="pagination__item circle refresh" depressed style="top: -10px;border-radius: 100% !important;" fab>
           <v-icon>refresh</v-icon>
         </v-btn>
       </v-flex>
@@ -282,4 +282,6 @@
       opacity: .75
     tr.selected
       background-color: #e1e1e1e1
+  .refresh i
+    line-height: 34px
 </style>
