@@ -73,7 +73,7 @@
   import pagination from './mixins/pagination';
 
   export default {
-    name : 'data-table',
+    name : 'vuetify-table',
     props     : {
       actions      : {
         type   : Array,
