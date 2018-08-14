@@ -14,6 +14,6 @@
   "author": "CaoJiayuan",
   "license": "MIT",
   "dependencies": {
-    "nerio-js-utils": "^1.0.3"
+    "nerio-js-utils": "^1.0.5"
   }
 }
