@@ -1,6 +1,6 @@
 {
   "name": "nerio-vuetify-table",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "vuetify table component",
   "main": "index.js",
   "scripts": {

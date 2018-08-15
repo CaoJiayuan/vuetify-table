@@ -71,6 +71,9 @@
 
 <script>
   import pagination from './mixins/pagination';
+  import {functions} from 'nerio-js-utils'
+
+  const  {objectGet} = functions
 
   export default {
     name : 'vuetify-table',
@@ -184,7 +187,7 @@
           let {per_page, current_page} = this.paginator;
           value = index + (per_page * (current_page - 1));
         } else {
-          value = item[key];
+          value = objectGet(item, key);
         }
         let display = field.display;
         if (!display) {
