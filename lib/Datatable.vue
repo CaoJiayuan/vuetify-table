@@ -285,6 +285,9 @@
       opacity: .75
     tr.selected
       background-color: #e1e1e1e1
+    &.datatable--select-all
+      thead > tr > th:first-child
+        width: 64px
   .refresh i
     line-height: 34px
 </style>
