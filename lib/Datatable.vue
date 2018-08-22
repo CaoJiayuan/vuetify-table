@@ -48,7 +48,7 @@
         <v-pagination class="text-xs-center pt-2" @input="page" :total-visible="7" circle
                       v-model="pagination.page"
                       :length="paginator.last_page"></v-pagination>
-        <v-btn :dark="dark" @click="refresh" :class="refreshing ? 'animate rotation' : ''"
+        <v-btn small :dark="dark" @click="refresh" :class="refreshing ? 'animate rotation' : ''"
                class="pagination__item circle refresh" depressed style="top: -10px;border-radius: 100% !important;" fab>
           <v-icon>refresh</v-icon>
         </v-btn>
