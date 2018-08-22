@@ -53,16 +53,18 @@
           <v-icon>refresh</v-icon>
         </v-btn>
       </v-flex>
-      <v-layout xs3 row class="text-xl-right">
-        <v-select
-          :items="pageSizes"
-          v-model="pageSize"
-          single-line
-          bottom
-          label="Select"
-          @input="load({})"
-          class="pull-right"
-        ></v-select>
+      <v-layout xs3 row class="text-xl-right justify-center" >
+        <v-flex xs4>
+          <v-select
+            :items="pageSizes"
+            v-model="pageSize"
+            single-line
+            bottom
+            label="Select"
+            @input="load({})"
+            class="pull-right"
+          ></v-select>
+        </v-flex>
         <v-subheader class="pull-right" style="height: 74px;">{{displayAction(paginator)}}</v-subheader>
       </v-layout>
     </v-layout>
