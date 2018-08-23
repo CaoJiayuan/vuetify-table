@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap>
     <v-flex xs12>
-      <v-data-table :select-all="selectable" v-model="selected" :must-sort="mustSort"
+      <v-data-table :select-all="selectColor" v-model="selected" :must-sort="mustSort"
                     :total-items="paginator.total" :dark="dark" disable-initial-sort
                     :headers="headerFields" :items="paginator.data" hide-actions :loading="loading" :hide-headers="hideHeaders"
                     :pagination.sync="pagination">
@@ -12,11 +12,12 @@
         </template>
         <template slot="items" slot-scope="props">
           <tr :class="props.selected ? 'selected' : ''">
-            <td v-if="selectable">
+            <td v-if="selectColor">
               <v-checkbox
                 primary
                 hide-details
                 v-model="props.selected"
+                :color="selectColor"
               ></v-checkbox>
             </td>
             <td v-if="!field.action" :class="field.align ? 'text-xs-'+ field.align : 'text-xs-left'"
@@ -113,7 +114,7 @@
       dark   : Boolean,
       color   : {
         type: String,
-        default: undefined
+        default: 'primary'
       },
       value        : {
         type   : Array,
@@ -148,6 +149,9 @@
         });
         return has;
       },
+      selectColor(){
+        return this.selectable ? this.color : false
+      }
     },
     components: {},
     methods   : {
