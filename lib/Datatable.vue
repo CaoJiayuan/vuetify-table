@@ -45,11 +45,11 @@
     <v-layout xs12 row>
       <v-flex xs9 class="text-xs-left">
 
-        <v-pagination class="text-xs-center pt-2" @input="page" :total-visible="7" circle
+        <v-pagination :color="color" class="text-xs-center pt-2" @input="page" :total-visible="7" circle
                       v-model="pagination.page"
                       :length="paginator.last_page"></v-pagination>
-        <v-btn small :dark="dark" @click="refresh" :class="refreshing ? 'animate rotation' : ''"
-               class="pagination__item circle refresh" depressed style="top: -10px;border-radius: 100% !important;" fab>
+        <v-btn :color="color" small :dark="dark" @click="refresh" :class="refreshing ? 'animate rotation' : ''"
+               class="pagination__item circle refresh elevation-2" style="top: -10px;border-radius: 100% !important;" fab>
           <v-icon>refresh</v-icon>
         </v-btn>
       </v-flex>
@@ -111,6 +111,10 @@
       selectable   : Boolean,
       hideHeaders   : Boolean,
       dark   : Boolean,
+      color   : {
+        type: String,
+        default: undefined
+      },
       value        : {
         type   : Array,
         default: () => []
