@@ -2,7 +2,7 @@
   <v-layout row wrap>
     <v-flex xs12>
       <v-data-table :select-all="selectColor" v-model="selected" :must-sort="mustSort"
-                    :total-items="paginator.total" :dark="dark" disable-initial-sort
+                    :total-items="paginator.total" disable-initial-sort
                     :headers="headerFields" :items="paginator.data" hide-actions :loading="loading" :hide-headers="hideHeaders"
                     :pagination.sync="pagination">
         <template slot="no-data">
