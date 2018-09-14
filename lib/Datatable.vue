@@ -287,7 +287,7 @@
 </script>
 
 <style lang="sass">
-  .datatable
+  .v-datatable
     .placeholder
       padding: 4px 10px
       color: white
@@ -295,7 +295,7 @@
       opacity: .75
     tr.selected
       background-color: #e1e1e1e1
-    &.datatable--select-all
+    &.v-datatable--select-all
       thead > tr > th:first-child
         width: 64px
   .refresh i
